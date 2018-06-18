@@ -1,0 +1,234 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marsheet</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+
+            <center>
+                <h1>STUDENT MARKSHEET</h1>
+            </center>
+
+            <form action="javascript:void(0);" id="myForm" name="contactFrm">
+
+
+            <div class="col-md-4 col-md-offset-1">
+                    <fieldset>
+                        <!-- <legend>STUDENT INFORMATION</legend> -->
+                        <div class="form_main">
+                                <h4 class="heading"><strong>STUDENT </strong> INFORMATION <span></span></h4>
+                                <div class="form">
+                                
+                                    <input type="text" required="" placeholder="Please input your Name" value="" id="input_name" name="input_name" class="txt">
+                                    <input type="text" required="" id="input_fname" placeholder="Please input your Father  Name" value="" name="Father Name" class="txt">
+                                    <input type="text" required="" id="input_class" placeholder="Please input your Class" value="" name="Batch" class="txt">
+                                    <input type="text" required="" id="input_lclass" placeholder="Please input your last  Class" value="" name="Batch" class="txt">
+                                    <input type="text" required="" id="input_pclass" placeholder="Please input your last  Passing Class " value="" name="Batch" class="txt">
+                                    <input type="text" required="" id="input_rollno" placeholder="Please input your Roll No " value="" name="Batch" class="txt">
+                                    
+                                    
+                                   
+                                
+                            </div>
+                        </div>
+                    </fieldset>
+            </div>
+
+
+            <div class="col-md-4 col-md-offset-1">
+                    <fieldset>
+                        <!-- <legend>STUDENT INFORMATION</legend> -->
+                        <div class="form_main">
+                                <h4 class="heading"><strong>Subject </strong> Marks <span></span></h4>
+                                <div class="form">
+                                
+
+                                    <input type="text" required="" id="input_addmission" placeholder="Admission Fees" value="" name="name" class="txt">
+                                    <input type="text" required="" id="input_monthly" placeholder="Mothly Fees" value="" name="name" class="txt">
+                                    <input type="text" required="" id="input_extra" placeholder="Extracirculum Fees" value="" name="name" class="txt">
+                                    <input type="text" required="" id="input_game" placeholder="Game fees" value="" name="name" class="txt">
+                                   
+                                    
+                              
+                            </div>
+                        </div>
+                    </fieldset>
+            </div>
+            <div class="clearfix" >
+
+                    <div class="col-md-8 col-md-offset-2">
+                            <fieldset>
+                                <!-- <legend>STUDENT INFORMATION</legend> -->
+                                <div class="form_main">
+                                        <h4 class="heading"><strong>Subject </strong> Marks <span></span></h4>
+                                        <div class="form">
+                                        
+        
+                                            <input type="number" min="0" max="100" id="input_eng" required="englishg" placeholder="English  " value="" name="name" class="txt">
+                                            <input type="number" min="0" max="100" id="input_phys"required="" placeholder="Physics  " value="" name="name" class="txt">
+                                            
+                                    </div>
+                                </div>
+                            </fieldset>
+                    </div>
+
+            </div>
+
+            <div class="col-md-12">
+
+                    <center>
+                            <input type="submit" value="submit" name="submit" class="txt2">
+                    </center>
+
+            </div>
+
+        </form>
+
+        </div>
+    </div>
+
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+        </div>
+        <div id="no-more-tables">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf">
+        		<thead class="cf">
+        			<tr>
+        				<th>Name</th>
+                        <th>Father Name</th>
+                        <th>Class</th>
+                        <th>Last Class</th>
+                        <th>Last Passing Class</th>
+                        <th>Roll No</th>
+                        <th>Admission Fees </th>
+                        <th>Monthly Fees </th>
+                        <th>Extracirculum Fees </th>
+                        <th>Game Fees </th>
+                        <th>English Marks </th>
+                        <th>Physics Marks </th>
+
+                        <th>Total Marks </th>
+                        <th>Average Marks </th>
+                        <th>Grade </th>
+                        
+        			</tr>
+        		</thead>
+        		<tbody>
+
+        			<tr>
+        				<td id="nametxt"></td>
+        				<td id="fnametxt"></td>
+        				<td id="classtxt"></td>
+        				<td id="lclasstxt"></td>
+        				<td id="lpassingtxt"></td>
+                        <td id="rolltxt"></td>
+                        
+        				<td id="addtxt"></td>
+        				<td id="monthtxt"></td>
+        				<td id="extratxt"></td>
+        				<td id="gametxt"></td>
+        				<td id="englishtxt"></td>
+                        <td id="physicstxt"></td>
+                        
+
+        				<td id="totaltxt"></td>
+        				<td id="avgtxt"></td>
+        				<td id="gradestxt"></td>
+                    </tr>
+
+        		</tbody>
+        	</table>
+        </div>
+    </div>
+    
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<script>
+
+
+document.getElementById("myForm").onsubmit = function() {myFunction()};
+
+function myFunction() {
+
+    document.getElementById("nametxt").innerHTML=document.getElementById('input_name').value;
+    document.getElementById("fnametxt").innerHTML=document.getElementById('input_fname').value;
+    document.getElementById("classtxt").innerHTML=document.getElementById('input_class').value;
+
+    document.getElementById("lclasstxt").innerHTML=document.getElementById('input_lclass').value;
+    document.getElementById("lpassingtxt").innerHTML=document.getElementById('input_pclass').value;
+    document.getElementById("rolltxt").innerHTML=document.getElementById('input_rollno').value;
+
+
+    document.getElementById("addtxt").innerHTML=document.getElementById('input_addmission').value;
+    document.getElementById("monthtxt").innerHTML=document.getElementById('input_monthly').value;
+    document.getElementById("extratxt").innerHTML=document.getElementById('input_monthly').value;
+    document.getElementById("gametxt").innerHTML=document.getElementById('input_game').value;
+
+
+    document.getElementById("englishtxt").innerHTML=document.getElementById('input_eng').value;
+    document.getElementById("physicstxt").innerHTML=document.getElementById('input_phys').value;
+    
+    var total = parseInt( document.getElementById('input_eng').value) + parseInt( document.getElementById('input_phys').value);
+      
+    document.getElementById("totaltxt").innerHTML=   total;
+    var average = total/2;
+
+    document.getElementById("avgtxt").innerHTML=  average ;
+
+
+
+    switch(true)
+    {
+	      case(average>=80):
+	      document.getElementById("gradestxt").innerHTML="A1";
+	      break;
+	      case(average>=70):
+	      document.getElementById("gradestxt").innerHTML="A";
+	      break;
+	      case(average>=60):
+	      document.getElementById("gradestxt").innerHTML="B";
+	      break;
+	      case(average>=50):
+	      document.getElementById("gradestxt").innerHTML="C";
+	      break;
+	      case(average>=40):
+	      document.getElementById("gradestxt").innerHTML="D";
+	      break;
+	      case(average<40):
+	      document.getElementById("gradestxt").innerHTML="Fail";
+	      break;
+    }
+
+
+    document.getElementById("totaltxt").innerHTML =   total;
+
+    // alert();
+    // return false;
+
+}
+</script>
+        
+
+</body>
+</html>
